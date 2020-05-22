@@ -1,15 +1,3 @@
-#!/bin/bash
-
-set -e
-
-EXEC='bin/cmak -Dconfig.file=$CONFIG_FILE_PATH -Dhttp.port=$BIND_HTTP_PORT -Dapplication.home=$PWD'
-
-if [ ! -z "$@" ]; then EXEC="$@"; fi
-
-exec $EXEC
-```
-
-```
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 WORKDIR /opt/cmak
